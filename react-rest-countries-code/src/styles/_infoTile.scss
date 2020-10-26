@@ -7,7 +7,6 @@
         background-color: $lmElements;
         border-radius: 5px;
         box-shadow: $lmBoxShadow;
-        height: 370px;
         border-radius: 5px;
         overflow: hidden;
         cursor: pointer;
@@ -21,6 +20,7 @@
 
             &_name {
                 margin-bottom: 1rem;
+                font-size: 1.3rem;
             }
         }
 
@@ -28,6 +28,7 @@
             object-fit: cover;
             height: 170px;
             width: 100%;
+            box-shadow: $lmBoxShadow; 
         }
     }
 }
