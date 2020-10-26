@@ -1,0 +1,61 @@
+.container-search {
+    height: 52px;
+    margin-bottom: 2.6rem;
+    
+    .dropdown-control {
+        width: 210px;
+        height: 100%;
+        border-radius: 5px;
+        font-size: 1rem;
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+        border: none;
+        box-shadow: $lmBoxShadow;
+        position: relative;
+    }
+    
+    .dropdown-menu {
+        margin-top: 5px;
+        border-radius: 5px;
+        overflow: hidden;
+        max-height: none;
+    }
+
+    .dropdown-arrow {
+        margin-left: auto;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1rem;
+        font-weight: bold;
+        font-size: .7rem;
+    }
+    
+    .search-box {
+        width: 340px;
+        line-height: 30px;
+        padding-left: 3rem;
+        padding-right: 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        box-shadow: $lmBoxShadow;
+
+        &:focus {
+            border: 1px solid $lmInput;
+        }
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 1rem;
+        cursor: pointer;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+

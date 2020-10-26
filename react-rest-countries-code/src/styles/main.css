@@ -1,0 +1,162 @@
+header {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 5px #cccccc;
+          box-shadow: 0px 0px 5px #cccccc;
+  padding: 1.25em 0;
+  margin-bottom: 2.6rem;
+}
+
+.container-search {
+  height: 52px;
+  margin-bottom: 2.6rem;
+}
+
+.container-search .dropdown-control {
+  width: 210px;
+  height: 100%;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  -webkit-box-shadow: 0px 0px 5px #cccccc;
+          box-shadow: 0px 0px 5px #cccccc;
+  position: relative;
+}
+
+.container-search .dropdown-menu {
+  margin-top: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: none;
+}
+
+.container-search .dropdown-arrow {
+  margin-left: auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 1rem;
+  font-weight: bold;
+  font-size: .7rem;
+}
+
+.container-search .search-box {
+  width: 340px;
+  line-height: 30px;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 0px 0px 5px #cccccc;
+          box-shadow: 0px 0px 5px #cccccc;
+}
+
+.container-search .search-box:focus {
+  border: 1px solid #858585;
+}
+
+.container-search .search-icon {
+  position: absolute;
+  left: 1rem;
+  cursor: pointer;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.container-tiles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px;
+}
+
+.container-tiles .tile {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px #cccccc;
+          box-shadow: 0px 0px 5px #cccccc;
+  height: 370px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container-tiles .tile .tile-info {
+  padding: 1.5rem 2rem;
+}
+
+.container-tiles .tile .tile-info * {
+  margin-bottom: .5rem;
+}
+
+.container-tiles .tile .tile-info_name {
+  margin-bottom: 1rem;
+}
+
+.container-tiles .tile .tile-flag {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 170px;
+  width: 100%;
+}
+
+.btn-back {
+  font-size: 1.2em;
+  margin-top: 300px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Nunito Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #fafafa;
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 80vw;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  max-width: 1440px;
+}
+
+.container-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn {
+  padding: .35em 1em;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px #cccccc;
+          box-shadow: 0px 0px 5px #cccccc;
+}
+/*# sourceMappingURL=main.css.map */

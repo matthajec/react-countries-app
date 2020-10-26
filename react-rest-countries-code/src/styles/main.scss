@@ -1,0 +1,38 @@
+@import 'variables','header','search',"infoTile","countryInfoPage";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: $lmBg;
+    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    max-width: 1440px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: .35em 1em;
+    border-radius: 5px;
+    box-shadow: $lmBoxShadow;
+}

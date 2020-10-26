@@ -1,0 +1,34 @@
+.container-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+
+    .tile {
+        background-color: $lmElements;
+        border-radius: 5px;
+        box-shadow: $lmBoxShadow;
+        height: 370px;
+        border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+
+        .tile-info {
+            padding: 1.5rem 2rem;
+
+            * {
+                margin-bottom: .5rem;
+            }
+
+            &_name {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .tile-flag {
+            object-fit: cover;
+            height: 170px;
+            width: 100%;
+        }
+    }
+}
+
