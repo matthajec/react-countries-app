@@ -1,8 +1,9 @@
 import React from 'react'
-import {useParams, Link} from 'react-router-dom'
+import {useParams, useHistory, Link} from 'react-router-dom'
 
 function CountryInfoPage({countries}) {
     const {countryID} = useParams()
+    const history = useHistory()
 
     function findCountry(countryID) { //takes an alpha3Code and returns the corresponding country object
         return countries.find(country => country.alpha3Code === countryID)
@@ -11,11 +12,12 @@ function CountryInfoPage({countries}) {
     const country = findCountry(countryID) //sets the country the page content is based on
 
     if(!country) { //if no country is found for a url this is the fallback page
-        return <h1>Country not found!</h1>
+    return <h1 className="container">There is no country with the code '{countryID}'</h1>
     }
 
     let currenciesStr = ''
     let languagesStr = ''
+    let borderComponents = []
 
     country.currencies.forEach(currency => {
         if(currenciesStr.length === 0) {
@@ -33,12 +35,26 @@ function CountryInfoPage({countries}) {
         }
     })
 
+    borderComponents = country.borders.map(id => {
+        const borderCountry = findCountry(id)
+        
+        return (
+            <button 
+                key={id} 
+                className="details-bordered btn">
+                <Link to={`/${borderCountry.alpha3Code}`} >
+                    {borderCountry.name}
+                </Link>
+            </button>
+        )
+    })
+
     return (
         <div className="container">
-            <Link 
+            <button 
                 className="btn btn-back"
-                to="/"
-            >← Back</Link>
+                onClick={() => history.goBack()}
+            >← Back</button>
             <div className="container-details">
                 <img 
                     className="flag"
@@ -53,7 +69,7 @@ function CountryInfoPage({countries}) {
                     </p>
                     <p>
                         <b>Population: </b>
-                        {country.population}
+                        {country.population.toLocaleString()}
                     </p>
                     <p>
                         <b>Region: </b>
@@ -89,20 +105,7 @@ function CountryInfoPage({countries}) {
 
                 <div className="details-wide">
                     <b>Border Countries: </b>
-                    {country.borders.map(id => {
-                        const borderCountry = findCountry(id)
-                        console.log(borderCountry.name)
-                        return (
-                            <button className="details-bordered btn">
-                                <Link 
-                                    key={id} 
-                                    to={`/${borderCountry.alpha3Code}`} 
-                                >
-                                    {borderCountry.name}
-                                </Link>
-                            </button>
-                        )
-                    })}
+                    {borderComponents.length != 0 ? borderComponents : <span>None</span>}
                 </div>
             </div>
 

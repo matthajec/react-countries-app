@@ -13,6 +13,7 @@ function App() {
     const [countriesComponents, setCountriesComponents] = useState([])
     const [dropdownValue, setDropDownValue] = useState('none')
     const [searchValue, setSearchValue] = useState('')
+    const [isDarkMode, setIsDarkMode] = useState(false)
    
     //set countries to the API response when the site is loaded
     useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
         setCountriesComponents(filteredCountries.map((country, index)=> <InfoTile key={index} country={country}/>)) //countriesComponents is set to a list of components that match the query
     }, [dropdownValue, searchValue, countries]) //call the effect when the query is changed OR whenever countries is loaded
 
+
     //handles the state for the drop down
     const onDropdownSelect = ({value}) => {
         setDropDownValue(value)
@@ -50,6 +52,10 @@ function App() {
     //handles the state for the search input
     const onSearchInput = (e) => {
         setSearchValue(e.target.value)
+    }
+
+    const toggleTheme = () => {
+        setIsDarkMode(prev => !prev)
     }
 
     return (

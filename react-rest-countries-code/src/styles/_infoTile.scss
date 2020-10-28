@@ -26,7 +26,8 @@
 
         .tile-flag {
             object-fit: cover;
-            height: 170px;
+            height: 10vw;
+            max-height: 200px;
             width: 100%;
             box-shadow: $lmBoxShadow; 
         }
