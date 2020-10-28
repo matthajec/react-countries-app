@@ -2,4 +2,34 @@
     font-size: 1.2em;
     margin-top: 15px;
     display: inline-block;
+    margin-bottom: 57px;
+}
+
+.container-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+
+
+    .flag {
+        width: 35vw;
+        grid-row: span 3;
+        box-shadow: $lmBoxShadow;
+    }
+
+    .details-specifics {
+        p {
+            margin-bottom: .8rem;
+        }
+    }
+
+    .details-wide {
+        grid-column: span 2;
+        padding: 20px 0;
+    }
+
+    .details-bordered {
+        padding: .2rem .6rem;
+        margin: .25rem .4rem;
+    }
 }

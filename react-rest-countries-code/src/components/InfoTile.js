@@ -2,11 +2,10 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 function InfoTile({country}) {
-
     if(country) {
         return (
             <Link 
-                to={`/${country.alpha2Code}`}
+                to={`/${country.alpha3Code}`}
                 className="tile"
             >
                 <img 

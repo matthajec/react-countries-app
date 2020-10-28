@@ -3,12 +3,12 @@ header {
   -webkit-box-shadow: 0px 0px 5px #cccccc;
           box-shadow: 0px 0px 5px #cccccc;
   padding: 1.25em 0;
-  margin-bottom: 2.6rem;
+  margin-bottom: 42px;
 }
 
 .container-search {
   height: 52px;
-  margin-bottom: 2.6rem;
+  margin-bottom: 42px;
 }
 
 .container-search .dropdown-control {
@@ -118,6 +118,37 @@ header {
   font-size: 1.2em;
   margin-top: 15px;
   display: inline-block;
+  margin-bottom: 57px;
+}
+
+.container-details {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+.container-details .flag {
+  width: 35vw;
+  grid-row: span 3;
+  -webkit-box-shadow: 0px 0px 5px #cccccc;
+          box-shadow: 0px 0px 5px #cccccc;
+}
+
+.container-details .details-specifics p {
+  margin-bottom: .8rem;
+}
+
+.container-details .details-wide {
+  grid-column: span 2;
+  padding: 20px 0;
+}
+
+.container-details .details-bordered {
+  padding: .2rem .6rem;
+  margin: .25rem .4rem;
 }
 
 * {
@@ -162,5 +193,7 @@ a {
   -webkit-box-shadow: 0px 0px 5px #cccccc;
           box-shadow: 0px 0px 5px #cccccc;
   background-color: #fff;
+  outline: none;
+  border: 0;
 }
 /*# sourceMappingURL=main.css.map */

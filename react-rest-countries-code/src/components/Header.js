@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function Header({isDark, setIsDark}) {
+function Header() {
     return (
         <header>
             <div className="container container-flex">
