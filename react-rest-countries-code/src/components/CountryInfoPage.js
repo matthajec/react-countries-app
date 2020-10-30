@@ -105,7 +105,7 @@ function CountryInfoPage({countries}) {
 
                 <div className="details-wide">
                     <b>Border Countries: </b>
-                    {borderComponents.length != 0 ? borderComponents : <span>None</span>}
+                    {borderComponents.length !== 0 ? borderComponents : <span>None</span>}
                 </div>
             </div>
 
