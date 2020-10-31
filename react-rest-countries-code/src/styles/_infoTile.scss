@@ -34,3 +34,14 @@
     }
 }
 
+.container-tiles.dark {
+    .tile {
+        background-color: $dmElements;
+        box-shadow: $dmBoxShadow;
+        color: $dmText;
+
+        .tile-flag {
+            box-shadow: $dmBoxShadow;
+        }
+    }
+}

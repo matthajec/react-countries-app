@@ -13,6 +13,8 @@
         border: none;
         box-shadow: $lmBoxShadow;
         position: relative;
+        cursor: pointer;
+        transition: background-color 0s ease !important;
     }
     
     .dropdown-menu {
@@ -58,4 +60,42 @@
     }
 }
 
+.container-search.dark {
 
+    .dropdown-control {
+        box-shadow: $dmBoxShadow;
+        background-color: $dmElements;
+        color: $dmText;
+    }
+
+    .dropdown-menu {
+        box-shadow: $dmBoxShadow;
+        transition: none !important;
+        border: none;
+
+        * {
+            color: $dmText !important;
+            background-color: $dmElements;
+
+        }
+
+        *:hover {
+            background-color: darken($dmElements, 3);
+        }
+
+    }
+
+    .search-box {
+        box-shadow: $dmBoxShadow;
+        background-color: $dmElements;
+        color: $dmText;
+
+        &::placeholder {
+            color: $dmText;
+        }
+        
+        &:focus {
+            border: 1px solid red;
+        }
+    }
+}

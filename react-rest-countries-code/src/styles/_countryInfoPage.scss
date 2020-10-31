@@ -35,3 +35,23 @@
         margin: .25rem .4rem;
     }
 }
+
+.container-info-page.dark {
+    * {
+        color: $dmText;
+    }
+
+    .flag {
+        box-shadow: $dmBoxShadow;
+    }
+
+    .btn-back {
+        box-shadow: $dmBoxShadow;
+        background-color: $dmElements;
+    }
+
+    .details-bordered {
+        background-color: $dmElements;
+        box-shadow: $dmBoxShadow;
+    }
+}

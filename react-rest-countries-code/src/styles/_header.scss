@@ -3,4 +3,14 @@ header {
     box-shadow: $lmBoxShadow;
     padding: 1.25em 0;
     margin-bottom: 42px;
+
+    .container {
+        align-items: center;
+    }
+}
+
+header.dark {
+    background-color: $dmElements;
+    box-shadow: $dmBoxShadow;
+    color: $dmText;
 }

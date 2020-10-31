@@ -1,14 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-function Header() {
+function Header({isDark, toggleTheme}) {
     return (
-        <header>
-            <div className="container container-flex">
+        <header className={isDark ? 'dark' : ''}>
+            <div className='container container-flex'>
                 <Link to="/">
                     <h1>Where in the world?</h1>
                 </Link>
-                <h1>Light Mode</h1>
+                <h3 onClick={toggleTheme}>{isDark ? '🌙 Dark Mode' : '🌞 Light Mode'}</h3>
             </div>
         </header>
     )

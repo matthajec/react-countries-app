@@ -1,7 +1,7 @@
 import React from 'react'
 import {useParams, useHistory, Link} from 'react-router-dom'
 
-function CountryInfoPage({countries}) {
+function CountryInfoPage({countries, isDark}) {
     const {countryID} = useParams()
     const history = useHistory()
 
@@ -50,7 +50,7 @@ function CountryInfoPage({countries}) {
     })
 
     return (
-        <div className="container">
+        <div className={`container container-info-page ${isDark ? 'dark' : ''}`}>
             <button 
                 className="btn btn-back"
                 onClick={() => history.goBack()}

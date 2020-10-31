@@ -13,7 +13,7 @@ function App() {
     const [countriesComponents, setCountriesComponents] = useState([])
     const [dropdownValue, setDropDownValue] = useState('none')
     const [searchValue, setSearchValue] = useState('')
-    const [isDarkMode, setIsDarkMode] = useState(false)
+    const [isDark, setIsDark] = useState(false)
    
     //set countries to the API response when the site is loaded
     useEffect(() => {
@@ -54,22 +54,42 @@ function App() {
         setSearchValue(e.target.value)
     }
 
+    //handles theme
     const toggleTheme = () => {
-        setIsDarkMode(prev => !prev)
+        setIsDark(prev => !prev)
     }
+
+    useEffect(() => {
+        if(isDark) {
+            document.querySelector('body').classList.add('darkBg')
+        } else{
+            document.querySelector('body').classList.remove('darkBg')
+        }
+    }, [isDark])
 
     return (
         <>
-        <Header />
+        <Header 
+            isDark={isDark}
+            toggleTheme={toggleTheme}
+        />
         <Switch>
             <Route exact path="/">
-                <Search dropdownValue={dropdownValue} searchValue={searchValue} onDropdownSelect={onDropdownSelect} onSearchInput={onSearchInput}/>
-                <div className="container container-tiles">
+                <Search 
+                    isDark={isDark}
+                    dropdownValue={dropdownValue} 
+                    searchValue={searchValue} 
+                    onDropdownSelect={onDropdownSelect} 
+                    onSearchInput={onSearchInput}/>
+                <div className={`container container-tiles ${isDark ? 'dark' : ''}`}>
                     {countriesComponents}
                 </div>
             </Route>
             <Route exact path="/:countryID">
-                <CountryInfoPage countries={countries}/>
+                <CountryInfoPage 
+                    isDark={isDark}
+                    countries={countries}
+                />
             </Route>
         </Switch>
         </>

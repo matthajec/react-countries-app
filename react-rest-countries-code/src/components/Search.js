@@ -2,7 +2,7 @@ import React from 'react'
 import Dropdown from 'react-dropdown'
 import 'react-dropdown/style.css' 
 
-function Search({dropdownValue, searchValue, onDropdownSelect, onSearchInput}) {
+function Search({dropdownValue, searchValue, onDropdownSelect, onSearchInput, isDark}) {
     //each object in this array represents a drop down option
     const dropdownOptions = [
         { value: 'none', label: 'Filter by Region'},
@@ -14,7 +14,7 @@ function Search({dropdownValue, searchValue, onDropdownSelect, onSearchInput}) {
     ]
 
     return (
-        <div className="container container-flex container-search">
+        <div className={`container container-flex container-search ${isDark ? 'dark' : ''}`}>
             <label 
                 className="search-icon"
                 htmlFor="search"
