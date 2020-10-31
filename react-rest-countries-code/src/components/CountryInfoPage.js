@@ -6,7 +6,7 @@ function CountryInfoPage({countries, isDark}) {
     const history = useHistory()
 
     function findCountry(countryID) { //takes an alpha3Code and returns the corresponding country object
-        return countries.find(country => country.alpha3Code === countryID)
+        return countries.find(country => country.alpha3Code.toLowerCase() === countryID.toLowerCase())
     }
 
     const country = findCountry(countryID) //sets the country the page content is based on
