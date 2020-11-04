@@ -45,3 +45,42 @@
         }
     }
 }
+
+@media (max-width: $smallDesktopWidth) {
+    .container-tiles {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+
+        .tile {
+            .tile-flag {
+                height: 13vw;
+            }
+        }
+    }
+}
+
+@media (max-width: $tabletWidth) {
+    .container-tiles {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+
+        .tile {
+            .tile-flag {
+                height: 18vw;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobileWidth) {
+    .container-tiles {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;    
+
+        .tile {
+            .tile-flag {
+                height: 100vw;
+            }
+        }
+    }
+}

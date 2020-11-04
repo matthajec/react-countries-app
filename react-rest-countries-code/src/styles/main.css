@@ -141,6 +141,12 @@ header.dark {
   border: 1px solid red;
 }
 
+@media (max-width: 900px) {
+  .container-search .search-box {
+    width: 250px;
+  }
+}
+
 .container-tiles {
   display: -ms-grid;
   display: grid;
@@ -192,6 +198,39 @@ header.dark {
 .container-tiles.dark .tile .tile-flag {
   -webkit-box-shadow: 0px 0px 5px #333333;
           box-shadow: 0px 0px 5px #333333;
+}
+
+@media (max-width: 1270px) {
+  .container-tiles {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
+  .container-tiles .tile .tile-flag {
+    height: 13vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .container-tiles {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+  .container-tiles .tile .tile-flag {
+    height: 18vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-tiles {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+  }
+  .container-tiles .tile .tile-flag {
+    height: 100vw;
+  }
 }
 
 .btn-back {

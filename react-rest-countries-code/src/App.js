@@ -27,7 +27,10 @@ function App() {
             setCountries(data)
         })
 
-        setIsDark(localStorage.getItem('isDark'))
+        if(localStorage.getItem('isDark') === "true") { //local storage doesn't take booleans so a string is used
+            setIsDark(true)
+        }
+
     }, []) //only call once on mount
 
     useEffect(() => {
@@ -64,10 +67,10 @@ function App() {
     useEffect(() => {
         if(isDark) {
             document.querySelector('body').classList.add('darkBg')
-            localStorage.setItem('isDark', true);
+            localStorage.setItem('isDark', 'true'); //local storage doesn't take booleans so a string is used
         } else{
             document.querySelector('body').classList.remove('darkBg')
-            localStorage.setItem('isDark', false);
+            localStorage.setItem('isDark', 'false'); //local storage doesn't take booleans so a string is used
         }
     }, [isDark])
 
