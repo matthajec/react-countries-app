@@ -102,8 +102,16 @@
 
 @media (max-width: $tabletWidth) {
     .container-search {
-        .search-box {
-            width: 250px;
+        margin-bottom: 114px;
+        display: grid !important;
+        grid-template-rows: 52px 52px;
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+        width: 100%;
+        
+        .search-box,
+        .dropdown-control {
+            width: 100%;
         }
     }
 }

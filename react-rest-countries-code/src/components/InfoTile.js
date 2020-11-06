@@ -2,6 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 function InfoTile({country}) {
+
+    console.log(`rendered ${country.name}`)
+
     if(country) {
         return (
             <Link 
@@ -37,4 +40,4 @@ function InfoTile({country}) {
     }
 }
 
-export default React.memo(InfoTile) //React.memo is used so that every time the inputs are changed all of the tiles are not unnessarily reloaded
+export default React.memo(InfoTile) //this component is memoized because otherwise it will rerender on every input

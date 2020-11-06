@@ -55,3 +55,34 @@
         box-shadow: $dmBoxShadow;
     }
 }
+
+@media (max-width: $smallDesktopWidth) {
+    .container-details {
+        grid-template-columns: 1fr 1fr;
+        
+        .flag {
+            grid-column: span 2;
+            margin: 0 auto;
+            width: 42vw;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        * {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: $mobileWidth) {
+    .container-details {
+        grid-template-rows: 1fr;
+
+        * {
+            grid-column: span 2;
+            text-align: center;
+        }
+    }
+}

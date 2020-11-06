@@ -14,3 +14,15 @@ header.dark {
     box-shadow: $dmBoxShadow;
     color: $dmText;
 }
+
+@media (max-width: $mobileWidth) {
+    header {
+        .container {
+            flex-direction: column;
+
+            *:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
