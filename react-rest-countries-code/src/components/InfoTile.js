@@ -4,12 +4,8 @@ import LazyLoad from 'react-lazyload';
 
 function InfoTile({ country }) {
     return (
-        <LazyLoad >
-
-            <Link
-                to={`/${country.alpha3Code}`}
-                className="tile"
-            >
+        <LazyLoad className="tile">
+            <Link to={`/${country.alpha3Code}`}>
                 <img
                     className="tile-flag"
                     src={country.flag}

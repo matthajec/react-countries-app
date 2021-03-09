@@ -1,13 +1,12 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Search from './components/Search';
 import CountryInfoPage from './components/CountryInfoPage';
+import InfoTile from './components/InfoTile';
 
 import './styles/main.css';
-
-const InfoTile = React.lazy(() => import('./components/InfoTile'));
 
 function App() {
   const [countries, setCountries] = useState([]);
@@ -47,9 +46,7 @@ function App() {
     });
 
     setCountriesComponents(filteredCountries.map((country, index) => (
-      <Suspense key={index} fallback="">
-        <InfoTile country={country} />
-      </Suspense>
+      <InfoTile key={index} country={country} />
     ))); //countriesComponents is set to a list of components that match the query
   }, [dropdownValue, searchValue, countries]); //call the effect when the query is changed OR whenever countries is loaded
 
