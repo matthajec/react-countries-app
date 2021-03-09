@@ -1,21 +1,20 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazyload';
 
-function InfoTile({country}) {
+function InfoTile({ country }) {
+    return (
+        <LazyLoad >
 
-    console.log(`rendered ${country.name}`)
-
-    if(country) {
-        return (
-            <Link 
+            <Link
                 to={`/${country.alpha3Code}`}
                 className="tile"
             >
-                <img 
+                <img
                     className="tile-flag"
                     src={country.flag}
                     alt={`flag of ${country.name}`}
-                ></img>
+                />
                 <div className="tile-info">
                     <h2 className="tile-info_name">{country.name}</h2>
 
@@ -34,10 +33,9 @@ function InfoTile({country}) {
                     </p>
                 </div>
             </Link>
-        )
-    } else {
-        return (<h1>Loading</h1>)
-    }
+        </LazyLoad>
+
+    );
 }
 
-export default React.memo(InfoTile) //this component is memoized because otherwise it will rerender on every input
+export default React.memo(InfoTile); //this component is memoized because otherwise it will rerender on every input
